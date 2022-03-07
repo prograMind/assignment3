@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Stage from './Stage'
+import Item from './Item'
 
 export default function Home() {
   return (
@@ -14,10 +15,11 @@ export default function Home() {
 
       <main>
         <h1>My Startup Progress</h1>
-        <p>why is not commiting!!!</p>
+        <p>I think this actually works now</p>
       </main>
       <div>
         <Stage name="Discovery"/>
+          <Item item="test"></Item>
         <Stage name="Delivery"/>
         <Stage name="Whatever"/>
       </div>
