@@ -18,10 +18,17 @@ export default function Home() {
         <p>I think this actually works now</p>
       </main>
       <div>
+        <Stage name="Foundation"/>
+          <Item item="Setup virtual office"></Item>
+          <Item item="Set mission & vision"></Item>
+          <Item item="Select business name"></Item>
+          <Item item="Buy domains"></Item>
         <Stage name="Discovery"/>
-          <Item item="test"></Item>
+          <Item item="Create roadmap"></Item>
+          <Item item="Competitor analysis"></Item>
         <Stage name="Delivery"/>
-        <Stage name="Whatever"/>
+          <Item item="Setup virtual office"></Item>
+          <Item item="Setup virtual office"></Item>
       </div>
     </div>
   )
