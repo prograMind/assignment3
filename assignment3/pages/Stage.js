@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Item from './Item'
+import StageName from "./StageName"
 import {data} from './data'
 
 export default function Stage (props) {
@@ -20,12 +21,12 @@ export default function Stage (props) {
 
     return (
         <>
-        {data?.map((stage) => {
+        {data.map((stage) => {
             return (
             stage.tasks.map((t)=> {
                 return (
                     <div>                
-                        <h2>{stage.step}</h2>
+                        <StageName name={stage.step} />
                         <Item item={t.task}/>
                     </div>
                 )
