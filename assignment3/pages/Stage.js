@@ -23,17 +23,15 @@ export default function Stage (props) {
         <>
         {data.map((stage) => {
             return (
-            stage.tasks.map((t)=> {
-                return (
-                    <div>                
-                        <StageName name={stage.step} />
-                        <Item item={t.task}/>
-                    </div>
+                    <StageName name={stage.step}>
+                    {stage.tasks.map((t)=> {
+                        return (              
+                        <Item item={t.task} done={t.completed}/>
                 )
-            })
+            })}
+            </StageName>
         )}
-    )
-    }
+    )}
     </>
     )
 }
