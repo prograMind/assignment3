@@ -16,7 +16,7 @@ export const data = [
       },
       {
         task: "Buy domains",
-        completed: false,
+        completed: true,
       },
     ],
     value: "Honza"

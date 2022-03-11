@@ -26,7 +26,7 @@ export default function Stage (props) {
                     <StageName name={stage.step}>
                     {stage.tasks.map((t)=> {
                         return (              
-                        <Item item={t.task} done={t.completed}/>
+                        <Item item={t.task} status={t.completed}/>
                 )
             })}
             </StageName>
@@ -36,6 +36,4 @@ export default function Stage (props) {
     )
 }
 
-//DÚ: jak zobrazit jen předměty k daný stagei
-//mapa mi jede 3x, proto se mi propisujou tasky všude
 

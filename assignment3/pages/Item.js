@@ -27,14 +27,10 @@ export default function Item (props) {
             name={props.item}
             checked={isDone}
             onClick={handleClick}
+            data-status={props.status}
             />
             <label htmlFor={props.item}>{props.item}</label>
         </div>
     )
 }
 
-// () => {
-// neco
-//}
-
-// () => neco
