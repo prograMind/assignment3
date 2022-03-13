@@ -20,6 +20,9 @@ export default function Stage (props) {
 
     const areItemsDone = (item) => {
         notDoneItems = Object.values(item).filter(status => !status)
+        if (notDoneItems.length === 0) {
+            //setIsDone (jenže teď mi to dá infinite loop)
+        }
     }
 
     console.log(notDoneItems)
