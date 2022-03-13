@@ -8,7 +8,6 @@ export default function Stage (props) {
     const [ isAllDone, setIsAllDone] = useState(false)
 
     // const isAllCompleted = true;
-
     /* kdyz (jsou vsechny itemy isDone) {
         změň isAllDone na true a vyrenderuj "done"
     }
@@ -17,16 +16,28 @@ export default function Stage (props) {
     // if (isAllCompleted) {
     //    setIsAllDone(true)
     // }
-    
+    let notDoneItems = []
+
+    const areItemsDone = (item) => {
+        notDoneItems = Object.values(item).filter(status => !status)
+    }
+
+    console.log(notDoneItems)
 
     return (
         <>
         {data.map((stage) => {
             return (
-                    <StageName name={stage.step}>
+                    <StageName
+                    key={stage.id}
+                    name={stage.step}>
                     {stage.tasks.map((t)=> {
-                        return (              
-                        <Item item={t.task} status={t.completed}/>
+                        areItemsDone(t) 
+                        return (             
+                        <Item 
+                        key={t.id} 
+                        item={t.task} 
+                        status={t.checked}/>
                 )
             })}
             </StageName>

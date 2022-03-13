@@ -7,10 +7,6 @@ import {data} from './data'
 
 export default function Home() {
 
-  const localData = data.map((stage) => {
-    
-  })
-
   return (
     <div className={styles.container}>
       <main>

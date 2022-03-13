@@ -26,7 +26,7 @@ export default function Item (props) {
             id={props.item}
             name={props.item}
             checked={isDone}
-            onClick={handleClick}
+            onChange={handleClick}
             data-status={props.status}
             />
             <label htmlFor={props.item}>{props.item}</label>
