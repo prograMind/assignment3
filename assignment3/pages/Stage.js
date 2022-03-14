@@ -7,15 +7,15 @@ export default function Stage (props) {
     const [ isDone, setIsDone] = useState(false)
     const [ isAllDone, setIsAllDone] = useState(false)
 
-    // const isAllCompleted = true;
-    /* kdyz (jsou vsechny itemy isDone) {
-        změň isAllDone na true a vyrenderuj "done"
-    }
+
+    /* 
+    1. vyřešit infinite loop
+    2. přidat funkci pro všechny items
+    3. vyřešit, jak zjistit jestli jsou hotový items pro konkrétní stage (pomocí ids? něco jako "currentStage +-1")
+    4. conditional rendering - vyrenderovat "Done" a checkmark a změnit "disabled" property 
     */
 
-    // if (isAllCompleted) {
-    //    setIsAllDone(true)
-    // }
+
     let notDoneItems = []
 
     const areItemsDone = (item) => {

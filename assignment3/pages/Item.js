@@ -23,6 +23,7 @@ export default function Item (props) {
         <div>
             <input
             type="checkbox"
+            disabled="disabled"
             id={props.item}
             name={props.item}
             checked={isDone}
